@@ -41,11 +41,11 @@ namespace BluffCityCaseDay02
 
                 for (int t = 0; t < 30; t++)
                 {
-                    flightNumbers.Add(airline + Router.Instance._Randy.Next(1000, 9999).ToString());
-                    gates.Add(Router.Instance._Randy.Next(1, 48));
-                    expected.Add(new Time(Router.Instance._Randy.Next(1, 24), Router.Instance._Randy.Next(1, 60)));
-                    actualTime.Add(new Time(Router.Instance._Randy.Next(1, 24), Router.Instance._Randy.Next(1, 60)));
-                    checkinTimes.Add(new Time(Router.Instance._Randy.Next(1, 24), Router.Instance._Randy.Next(1, 60)));
+                    flightNumbers.Add(airline + RandomManager.Instance._Randy.Next(1000, 9999).ToString());
+                    gates.Add(RandomManager.Instance._Randy.Next(1, 48));
+                    expected.Add(new Time(RandomManager.Instance._Randy.Next(1, 24), RandomManager.Instance._Randy.Next(1, 60)));
+                    actualTime.Add(new Time(RandomManager.Instance._Randy.Next(1, 24), RandomManager.Instance._Randy.Next(1, 60)));
+                    checkinTimes.Add(new Time(RandomManager.Instance._Randy.Next(1, 24), RandomManager.Instance._Randy.Next(1, 60)));
                 }
             }
 
@@ -55,14 +55,14 @@ namespace BluffCityCaseDay02
 
                 for (int t = 0; t < 30; t++)
                 {
-                    var time = actualTime[Router.Instance._Randy.Next(0, actualTime.Count)];
-                    var destination = destinations[Router.Instance._Randy.Next(0, destinations.Count)];
+                    var time = actualTime[RandomManager.Instance._Randy.Next(0, actualTime.Count)];
+                    var destination = destinations[RandomManager.Instance._Randy.Next(0, destinations.Count)];
 
-                    airline.AddFlight(new AirlineCompanyData(destination, checkinTimes[Router.Instance._Randy.Next(0, checkinTimes.Count)],
+                    airline.AddFlight(new AirlineCompanyData(destination, checkinTimes[RandomManager.Instance._Randy.Next(0, checkinTimes.Count)],
                     time, airline.CompanyName, flightNumbers[i * 30 + t], CheckInStatus.Open));
 
-                    center.AddCenterData(new AirportInformationCenterData(gates[Router.Instance._Randy.Next(0, gates.Count)], time, destination,
-                        expected[Router.Instance._Randy.Next(0, expected.Count)], airline.CompanyName, FlightStatus.Boarding, flightNumbers[i * 30 + t]));
+                    center.AddCenterData(new AirportInformationCenterData(gates[RandomManager.Instance._Randy.Next(0, gates.Count)], time, destination,
+                        expected[RandomManager.Instance._Randy.Next(0, expected.Count)], airline.CompanyName, FlightStatus.Boarding, flightNumbers[i * 30 + t]));
                 }
             }
 

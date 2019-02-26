@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BluffCitySetupLib">
+      <HintPath>..\..\BluffCitySetupLib\BluffCitySetupLib\bin\Release\BluffCitySetupLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MsMQImplementation">
+      <HintPath>..\..\MsMQImplementation\MsMQImplementation\bin\Release\MsMQImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\MsMQImplementation\MsMQImplementation\bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,8 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AirlineCompanies\Emirates.cs" />
+    <Compile Include="AirlineCompanies\SAS.cs" />
+    <Compile Include="AirlineCompanies\WowAir.cs" />
+    <Compile Include="BluffCityAirportInfoCenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

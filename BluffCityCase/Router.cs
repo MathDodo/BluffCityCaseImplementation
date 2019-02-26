@@ -12,7 +12,6 @@ namespace BluffCityCaseDay02
         private Dictionary<Type, MessageQueue> _queues;
 
         public string Name => "Router";
-        public Random _Randy = new Random();
 
         public MessageQueue this[Type targetType]
         {
