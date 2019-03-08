@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{915E926A-C743-41C6-91BB-82C99B2E9C48}</ProjectGuid>
+    <ProjectGuid>{79B06D03-CDA0-471A-973B-E9D0DE773270}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BluffCityCaseDay04</RootNamespace>
-    <AssemblyName>BluffCityCaseDay04</AssemblyName>
+    <RootNamespace>BluffCityCaseDay06</RootNamespace>
+    <AssemblyName>BluffCityCaseDay06</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -40,7 +40,7 @@
       <HintPath>..\..\MsMQImplementation\MsMQImplementation\bin\Release\MsMQImplementation.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\MsMQImplementation\MsMQImplementation\bin\Release\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\BluffCitySetupLib\BluffCitySetupLib\bin\Release\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,14 +56,24 @@
     <Compile Include="AirlineCompanies\Emirates.cs" />
     <Compile Include="AirlineCompanies\SAS.cs" />
     <Compile Include="AirlineCompanies\WowAir.cs" />
-    <Compile Include="BluffCityAirportInfoCenter.cs" />
-    <Compile Include="CompanyPublisher.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Resequencer.cs" />
+    <Compile Include="Splitter.cs" />
+    <Compile Include="XmlObjects\Flight.cs" />
+    <Compile Include="XmlObjects\FlightDetailsInfoResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomManager.cs" />
+    <Compile Include="XmlObjects\Lugage.cs" />
+    <Compile Include="XmlObjects\Passenger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Response.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

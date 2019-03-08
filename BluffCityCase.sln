@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluffCityCaseDay02", "Bluff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluffCityCaseDay04", "BluffCityCaseDay04\BluffCityCaseDay04.csproj", "{915E926A-C743-41C6-91BB-82C99B2E9C48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluffCityCaseDay06", "BluffCityCaseDay06\BluffCityCaseDay06.csproj", "{79B06D03-CDA0-471A-973B-E9D0DE773270}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{915E926A-C743-41C6-91BB-82C99B2E9C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915E926A-C743-41C6-91BB-82C99B2E9C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915E926A-C743-41C6-91BB-82C99B2E9C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B06D03-CDA0-471A-973B-E9D0DE773270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B06D03-CDA0-471A-973B-E9D0DE773270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B06D03-CDA0-471A-973B-E9D0DE773270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B06D03-CDA0-471A-973B-E9D0DE773270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

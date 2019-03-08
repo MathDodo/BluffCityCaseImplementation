@@ -1,8 +1,8 @@
 ﻿using Data;
 using System;
+using Setup.Data;
 using System.Messaging;
 using BluffCitySetupLib;
-using Setup.Data;
 
 namespace BluffCityCaseDay04
 {
@@ -18,14 +18,6 @@ namespace BluffCityCaseDay04
 
             // End the asynchronous receive operation.
             Message m = mq.EndReceive(asyncResult.AsyncResult);
-
-            try
-            {
-                Console.WriteLine("Correlationid : " + m.CorrelationId);
-            }
-            catch (Exception)
-            {
-            }
 
             if (m.Label == "Expected")
             {

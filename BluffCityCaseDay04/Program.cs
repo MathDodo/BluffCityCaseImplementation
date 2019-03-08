@@ -75,14 +75,25 @@ namespace BluffCityCaseDay04
                 }
             }
 
-            MessageQueuesManager.Instance.CreateQueue(sas, path);
-            MessageQueuesManager.Instance.CreateQueue(wow, path);
-            MessageQueuesManager.Instance.CreateQueue(emirates, path);
-            MessageQueuesManager.Instance.CreateQueue(center, path);
+            //MessageQueuesManager.Instance.CreateQueue(sas, path);
+            //MessageQueuesManager.Instance.CreateQueue(wow, path);
+            //MessageQueuesManager.Instance.CreateQueue(emirates, path);
+            //MessageQueuesManager.Instance.CreateQueue(center, path);
 
-            for (int i = 0; i < requesters.Count; i++)
+            //for (int i = 0; i < requesters.Count; i++)
+            //{
+            //    requesters[i].Request(center[typeof(string)]);
+            //}
+
+            MessageQueuesManager.Instance.CreateMulticastQueue(CompanyPublisher.Instance);
+            MessageQueuesManager.Instance.CreateQueue(sas, path, MessageQueuesManager.Instance.MulticastPath.Split('=')[1]);
+            MessageQueuesManager.Instance.CreateQueue(wow, path, MessageQueuesManager.Instance.MulticastPath.Split('=')[1]);
+            MessageQueuesManager.Instance.CreateQueue(emirates, path, MessageQueuesManager.Instance.MulticastPath.Split('=')[1]);
+
+            for (int i = 0; i < airlines.Count; i++)
             {
-                requesters[i].Request(center[typeof(string)]);
+                center._TargetCompany = airlines[i].CompanyName;
+                center.SendMessage(CompanyPublisher.Instance[typeof(Tuple<string, Time>)], new Tuple<string, Time>(airlines[i][3].FlightNumber, new Time()));
             }
 
             Console.ReadKey();

@@ -4,13 +4,13 @@ using Setup.Data;
 using System;
 using System.Messaging;
 
-namespace BluffCityCaseDay04
+namespace BluffCityCaseDay06
 {
-    public class SAS : AirlineCompany, IReceiver<Tuple<string, Time>>, IRequester
+    public class WowAir : AirlineCompany, IReceiver<Tuple<string, Time>>, IRequester
     {
         public string Name => CompanyName;
 
-        public SAS() : base("SAS")
+        public WowAir() : base("Wow Air")
         {
         }
 

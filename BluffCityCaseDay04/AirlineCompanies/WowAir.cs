@@ -21,9 +21,16 @@ namespace BluffCityCaseDay04
             // End the asynchronous receive operation.
             Message m = mq.EndReceive(asyncResult.AsyncResult);
 
-            var body = (Tuple<string, Time>)m.Body;
+            if (m.Label == CompanyName)
+            {
+                var body = (Tuple<string, Time>)m.Body;
 
-            Console.WriteLine(_flightsInformation.Find(f => f.FlightNumber == body.Item1).ToString() + " is expected to arrive at: " + body.Item2.ToString());
+                Console.WriteLine(_flightsInformation.Find(f => f.FlightNumber == body.Item1).ToString() + " is expected to arrive at: " + body.Item2.ToString());
+            }
+            else
+            {
+                Console.WriteLine("This message is not for me but for: " + m.Label);
+            }
 
             mq.BeginReceive();
         }

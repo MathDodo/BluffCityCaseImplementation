@@ -4,7 +4,7 @@ using Setup.Data;
 using System;
 using System.Messaging;
 
-namespace BluffCityCaseDay04
+namespace BluffCityCaseDay06
 {
     public class SAS : AirlineCompany, IReceiver<Tuple<string, Time>>, IRequester
     {
