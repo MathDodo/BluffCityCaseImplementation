@@ -1,9 +1,9 @@
 ﻿using Data;
 using System;
 
-namespace BluffCityCaseDay06
+namespace BluffCityCaseDay10B
 {
-    public sealed class RandomManager : SingletonBase<RandomManager>
+    public class RandomManager : SingletonBase<RandomManager>
     {
         public Random _Randy;
 

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" ?>
+<!--BaggageTransaction -->
+<BaggageTransaction>
+  <TransactionId>1234</TransactionId>
+  <FlightNumber>SW497</FlightNumber>
+  <AirlineCompany>South West Airlines</AirlineCompany>
+  <GateNumber>14</GateNumber>
+  <Weight>14.55</Weight>
+  <Class>A2</Class>
+  <Priority>2nd</Priority>
+  <Destination>AMS</Destination>
+</BaggageTransaction>

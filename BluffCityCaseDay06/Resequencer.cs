@@ -6,7 +6,7 @@ using Setup;
 
 namespace BluffCityCaseDay06
 {
-    public class Resequencer : SingletonBase<Resequencer>, IReceiver<Tuple<int, int, Flight, Passenger>>, IReceiver<Tuple<int, int, string, Flight, Luggage>>
+    public sealed class Resequencer : SingletonBase<Resequencer>, IReceiver<Tuple<int, int, Flight, Passenger>>, IReceiver<Tuple<int, int, string, Flight, Luggage>>
     {
         private List<AirlineCompany> _airline;
         private Dictionary<Type, MessageQueue> _queues;
